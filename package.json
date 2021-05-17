@@ -1,0 +1,46 @@
+{
+  "name": "tradingview",
+  "version": "0.1.0",
+  "description": "An electron based desktop client app for tradingview.com",
+  "main": "index.js",
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "millennius",
+              "name": "tradingview-app"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "make": "electron-forge make",
+    "generate-release": "nativefier --name \"TradingView\" \"https://www.tradingview.com/\"",
+    "package-windows": "rimraf app && node packager.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millennius/tradingview-app.git"
+  },
+  "keywords": [
+    "tradingview"
+  ],
+  "author": "Millennius Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/millennius/tradingview-app/issues"
+  },
+  "homepage": "https://github.com/millennius/tradingview-app#readme",
+  "dependencies": {
+    "nativefier": "^43.1.3"
+  },
+  "devDependencies": {
+    "@electron-forge/publisher-github": "^6.0.0-beta.54",
+    "electron-winstaller": "^5.0.0"
+  }
+}
