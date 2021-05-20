@@ -1,5 +1,9 @@
 # tradingview-app
 
+```
+$ npm install -g nativefier
+```
+
 An electron based desktop client application for tradingview.com
 
 Clone this repository if you want to build from source.
